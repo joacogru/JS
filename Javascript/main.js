@@ -47,7 +47,7 @@ if (total < 72) {
     alert ("BURROOOOOOOOOOOOOOOOO dejá el golf por el bien de todos!")
 };
  */
-let malaSuerte = 13;
+/* let malaSuerte = 13;
 
 
 for (let i = 0; i < 15; i++) {
@@ -58,13 +58,13 @@ for (let i = 0; i < 15; i++) {
         continue;
     }
     console.log(i);
-}
+} */
 
 
 
-// while
+// while condicion de salida o bucle infinito posible!
 
-let numero = prompt("Ingrese un numero y le diré si es mala suerte \n *Para salir deje el campo vacío");
+/* let numero = prompt("Ingrese un numero y le diré si es mala suerte \n *Para salir deje el campo vacío");
 while (numero !== "") {
     if (numero == malaSuerte) {
         console.log("Has ingresado el " + numero + " DE LA MALA SUERTE!!! CORRANNNNNN");
@@ -74,6 +74,52 @@ while (numero !== "") {
         console.log("Estamosa a salvo, el numero " + numero + " no trae mala suerte!!!");
     }
     numero = prompt("Ingrese un numero y le diré si es mala suerte \n *Para salir deje el campo vacío");
-};
+}; */
+
+
+// SIMULADOR Tarjeta de Golf
+let parHoyo1 = 4;
+let parHoyo2 = 3;
+let parHoyo3 = 4;
+let parHoyo4 = 4;
+let parHoyo5 = 5;
+let parHoyo6 = 3;
+let parHoyo7 = 4;
+let parHoyo8 = 5;
+let parHoyo9 = 4;
+
+let parIda = parHoyo1+parHoyo2+parHoyo3+parHoyo4+parHoyo5+parHoyo6+parHoyo7+parHoyo8+parHoyo9
+
+let hoyo1 = parseInt(prompt("Hoyo 1"));
+let hoyo2 = parseInt(prompt("Hoyo 2"));
+let hoyo3 = parseInt(prompt("Hoyo 3"));
+let hoyo4 = parseInt(prompt("Hoyo 4"));
+let hoyo5 = parseInt(prompt("Hoyo 5"));
+let hoyo6 = parseInt(prompt("Hoyo 6"));
+let hoyo7 = parseInt(prompt("Hoyo 7"));
+let hoyo8 = parseInt(prompt("Hoyo 8"));
+let hoyo9 = parseInt(prompt("Hoyo 9"));
+
+let ida = hoyo1+hoyo2+hoyo3+hoyo4+hoyo5+hoyo6+hoyo7+hoyo8+hoyo9
+
+console.log(parIda);
+
+
+function par(ida) {
+    if (ida == parIda) {
+        console.log("Hiciste "+ida+" golpes, par de cancha.");
+    } else if(ida > parIda) {
+        console.log("Hiciste "+ida+" golpes, "+ (ida-parIda) +" sobre el par de cancha.");
+    } else if (ida < parIda) {
+        console.log("Hiciste "+ida+" golpes, "+ (parIda-ida) +" bajo el par de cancha.");
+    } else if (isNaN(ida)) {
+        console.log("Walk Over");
+    };
+}
+
+
+//PREGUNTA DESDE EL PRACTICO!! (SE PUEDE CONCATENAR ASI? PORQUE ME TIRA UN UNDEFINED..)
+console.log(par(ida)+" "+"con la siguiente tarjeta: "+hoyo1+" "+hoyo2+" "+hoyo3+" "+hoyo4+" "+hoyo6+" "+hoyo7+" "+hoyo8+" "+hoyo9);
+
 
 
