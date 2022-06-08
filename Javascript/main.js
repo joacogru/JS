@@ -115,7 +115,7 @@ function par(ida) {
     } else if (ida < parIda) {
         console.log("Hola "+jugador+". Hiciste "+ida+" golpes, "+ (parIda-ida) +" bajo el par de cancha.");
     } else if (isNaN(ida)) {
-        console.log("Walk Over");
+        return alert(jugador+" presentó una tarjeta invalida.");
     };
 }
 
