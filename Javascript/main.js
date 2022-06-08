@@ -78,17 +78,17 @@ while (numero !== "") {
 
 
 // SIMULADOR Tarjeta de Golf
-let parHoyo1 = 4;
-let parHoyo2 = 3;
-let parHoyo3 = 4;
-let parHoyo4 = 4;
-let parHoyo5 = 5;
-let parHoyo6 = 3;
-let parHoyo7 = 4;
-let parHoyo8 = 5;
-let parHoyo9 = 4;
+const parHoyo1 = 4;
+const parHoyo2 = 3;
+const parHoyo3 = 4;
+const parHoyo4 = 4;
+const parHoyo5 = 5;
+const parHoyo6 = 3;
+const parHoyo7 = 4;
+const parHoyo8 = 5;
+const parHoyo9 = 4;
 
-let parIda = parHoyo1+parHoyo2+parHoyo3+parHoyo4+parHoyo5+parHoyo6+parHoyo7+parHoyo8+parHoyo9
+const parIda = parHoyo1+parHoyo2+parHoyo3+parHoyo4+parHoyo5+parHoyo6+parHoyo7+parHoyo8+parHoyo9
 
 let hoyo1 = parseInt(prompt("Hoyo 1"));
 let hoyo2 = parseInt(prompt("Hoyo 2"));
