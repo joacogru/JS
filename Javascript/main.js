@@ -90,6 +90,8 @@ const parHoyo9 = 4;
 
 const parIda = parHoyo1+parHoyo2+parHoyo3+parHoyo4+parHoyo5+parHoyo6+parHoyo7+parHoyo8+parHoyo9
 
+let jugador = prompt("Ingresa tu nombre.")
+
 let hoyo1 = parseInt(prompt("Hoyo 1"));
 let hoyo2 = parseInt(prompt("Hoyo 2"));
 let hoyo3 = parseInt(prompt("Hoyo 3"));
@@ -107,11 +109,11 @@ console.log(parIda);
 
 function par(ida) {
     if (ida == parIda) {
-        console.log("Hiciste "+ida+" golpes, par de cancha.");
+        console.log("Hola "+jugador+". Hiciste "+ida+" golpes, par de cancha.");
     } else if(ida > parIda) {
-        console.log("Hiciste "+ida+" golpes, "+ (ida-parIda) +" sobre el par de cancha.");
+        console.log("Hola "+jugador+". Hiciste "+ida+" golpes, "+ (ida-parIda) +" sobre el par de cancha.");
     } else if (ida < parIda) {
-        console.log("Hiciste "+ida+" golpes, "+ (parIda-ida) +" bajo el par de cancha.");
+        console.log("Hola "+jugador+". Hiciste "+ida+" golpes, "+ (parIda-ida) +" bajo el par de cancha.");
     } else if (isNaN(ida)) {
         console.log("Walk Over");
     };
