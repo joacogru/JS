@@ -78,7 +78,7 @@ while (numero !== "") {
 
 
 // SIMULADOR Tarjeta de Golf
-const parHoyo1 = 4;
+/* const parHoyo1 = 4;
 const parHoyo2 = 3;
 const parHoyo3 = 4;
 const parHoyo4 = 4;
@@ -86,13 +86,13 @@ const parHoyo5 = 5;
 const parHoyo6 = 3;
 const parHoyo7 = 4;
 const parHoyo8 = 5;
-const parHoyo9 = 4;
+const parHoyo9 = 4; */
 
-const parIda = parHoyo1+parHoyo2+parHoyo3+parHoyo4+parHoyo5+parHoyo6+parHoyo7+parHoyo8+parHoyo9
+/* const parIda = parHoyo1+parHoyo2+parHoyo3+parHoyo4+parHoyo5+parHoyo6+parHoyo7+parHoyo8+parHoyo9 */
 
-let jugador = prompt("Ingresa tu nombre.")
+// let jugador = prompt("Ingresa tu nombre.")
 
-let hoyo1 = parseInt(prompt("Hoyo 1"));
+/* let hoyo1 = parseInt(prompt("Hoyo 1"));
 let hoyo2 = parseInt(prompt("Hoyo 2"));
 let hoyo3 = parseInt(prompt("Hoyo 3"));
 let hoyo4 = parseInt(prompt("Hoyo 4"));
@@ -100,14 +100,79 @@ let hoyo5 = parseInt(prompt("Hoyo 5"));
 let hoyo6 = parseInt(prompt("Hoyo 6"));
 let hoyo7 = parseInt(prompt("Hoyo 7"));
 let hoyo8 = parseInt(prompt("Hoyo 8"));
-let hoyo9 = parseInt(prompt("Hoyo 9"));
+let hoyo9 = parseInt(prompt("Hoyo 9")); */
 
-let ida = hoyo1+hoyo2+hoyo3+hoyo4+hoyo5+hoyo6+hoyo7+hoyo8+hoyo9
+const hoyo = [
+    {id: 1, par: 4, ronda: "ida"},
+    {id: 2, par: 3, ronda: "ida"}, 
+    {id: 3, par: 4, ronda: "ida"},
+    {id: 4, par: 4, ronda: "ida"},
+    {id: 5, par: 5, ronda: "ida"},
+    {id: 6, par: 3, ronda: "ida"},
+    {id: 7, par: 4, ronda: "ida"},
+    {id: 8, par: 5, ronda: "ida"},
+    {id: 9, par: 4, ronda: "ida"},
+    {id: 10, par: 5, ronda: "vuelta"},
+    {id: 11, par: 3, ronda: "vuelta"},
+    {id: 12, par: 5, ronda: "vuelta"},
+    {id: 13, par: 4, ronda: "vuelta"},
+    {id: 14, par: 4, ronda: "vuelta"},
+    {id: 15, par: 3, ronda: "vuelta"},
+    {id: 16, par: 5, ronda: "vuelta"},
+    {id: 17, par: 3, ronda: "vuelta"},
+    {id: 18, par: 4, ronda: "vuelta"},
+]
 
-console.log(parIda);
+
+let calcularIda = hoyo.filter((hoyo) => hoyo.ronda == "ida");
+
+console.log(calcularIda);
+
+let resultadoIda = calcularIda.reduce((acumulador, elemento) => acumulador + elemento.par, 0);
+
+console.log(resultadoIda);
 
 
-function par(ida) {
+function ingresarDatos(mensaje){
+    return prompt("Ingresa Score")
+};
+
+function jugador (nombre, matricula, handicap ) {
+    this.nombre = nombre;
+    this.matricula = matricula;
+    this.handicap = handicap;
+    
+    //metodo
+    this.nomScore = function() {if (this.score == this.par) {console.log("par")
+    } else if (this.score == --this.par) {console.log("birdie");}};
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// PRIMER ENTREGABLE
+/* let ida = hoyo1+hoyo2+hoyo3+hoyo4+hoyo5+hoyo6+hoyo7+hoyo8+hoyo9 */
+
+/* console.log(parIda); */
+
+//let parIda = hoyo.1
+
+/* function par(ida) {
     if (ida == parIda) {
         console.log("Hola "+jugador+". Hiciste "+ida+" golpes, par de cancha.");
     } else if(ida > parIda) {
@@ -120,8 +185,6 @@ function par(ida) {
 }
 
 
-//PREGUNTA DESDE EL PRACTICO!! (SE PUEDE CONCATENAR ASI? PORQUE ME TIRA UN UNDEFINED..)
-console.log(par(ida)+" "+"con la siguiente tarjeta: "+hoyo1+" "+hoyo2+" "+hoyo3+" "+hoyo4+" "+hoyo6+" "+hoyo7+" "+hoyo8+" "+hoyo9);
 
 
-
+ */
