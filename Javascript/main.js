@@ -128,12 +128,95 @@ let calcularIda = hoyo.filter((hoyo) => hoyo.ronda == "ida");
 
 console.log(calcularIda);
 
-let resultadoIda = calcularIda.reduce((acumulador, elemento) => acumulador + elemento.par, 0);
+/* let resultadoIda = calcularIda.reduce((acumulador, elemento) => acumulador + elemento.par, 0);
 
-console.log(resultadoIda);
+console.log(resultadoIda); */
+
+let resultadoIda = calcularIda.reduce(
+    (acumulador, elemento) => acumulador + elemento.par,
+    0
+  );
+
+  let calcularVuelta = hoyo.filter((hoyo) => hoyo.ronda == "vuelta");
+
+  let resultadoVuelta = calcularVuelta.reduce((acc, ele) => acc + ele.par, 0)
+  
+  console.log(resultadoIda);
+  console.log(resultadoVuelta);
+  
+  class Jugador {
+    constructor(nombre, handicap, score) {
+      this.nombre = nombre;
+      this.handicap = handicap;
+      this.score = score;
+    }
+  }
 
 
-function ingresarDatos(mensaje){
+let jugador1;
+
+function comenzar() {
+  let nombre = prompt("ingrese nombre jugador");
+  let handicap = prompt("ingrese su Handicap");
+  let score = [];
+
+  for (let i = 1; i <= 18; i++) {
+    let golpes = parseInt(prompt("ingrese los golpe del hoyo " + i));
+    score.push(golpes);
+  }
+
+  jugador1 = new Jugador(nombre, handicap, score); //como agregar mas jugadores?? y solo datos utiles
+
+  console.log(jugador1);
+}
+
+comenzar();
+
+let suma; //va queriendo, pero hay q agregar distintos escenarios
+for (let i = 0; i < jugador1.score.length; i++) { 
+  console.log(i);
+  if (jugador1.score[i] == hoyo[i].par) {
+    console.log("par en el hoyo " + i);
+  } else if (jugador1.score[i] > hoyo[i].par) {
+    suma = (jugador1.score[i] - hoyo[i].par);
+    console.log(suma += suma);
+  } else if (jugador1.score[i] < hoyo[i].par) {
+    console.log("birdie en el hoyo " + i);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// una idea que no funcionó
+/* function ingresarDatos(mensaje){
     return prompt("Ingresa Score")
 };
 
@@ -146,26 +229,9 @@ function jugador (nombre, matricula, handicap ) {
     this.nomScore = function() {if (this.score == this.par) {console.log("par")
     } else if (this.score == --this.par) {console.log("birdie");}};
 };
+ */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// PRIMER ENTREGABLE
+// PRIMER ENTREGABLE///////////////////////////////////////////////////////////////////////////////////////////
 /* let ida = hoyo1+hoyo2+hoyo3+hoyo4+hoyo5+hoyo6+hoyo7+hoyo8+hoyo9 */
 
 /* console.log(parIda); */
@@ -183,8 +249,5 @@ function jugador (nombre, matricula, handicap ) {
         return alert(jugador+" presentó una tarjeta invalida.");
     };
 }
-
-
-
-
- */
+*/
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
